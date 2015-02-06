@@ -1,0 +1,221 @@
+/* */
+/* 
+    Created on : 11-sep-2014, 10:40:39
+    Author     : Jose Adrian Ruiz Carmona
+*/
+#header{ min-height: 100px; background-color: #EBEAE9;}
+#page-content{ margin-top: 50px;}
+#content{ min-height: 100px; background-color: #F3F3F3; padding-top: 20px; padding-bottom: 20px;}
+#footer{ min-height: 80px; background-color: #EBEAE9; padding: 10px; font-size: 10px; text-align: center;}
+body{background-color: #B8B8B8; padding-top: 0px !important; }
+#title_module{ font-size: 20px; float: left;}
+#btn_regresar, #btn_salir {width: 49%;}
+
+.bar_user_sess{padding-top: 11px;height: 50px;background-color: #E0E0E0;border-color: #C0BEBE;border-bottom: 2px dotted #C0BEBE;color: #5F5F5F;}
+/*Nav Bar**/
+/* adjust body when menu is open */
+body.slide-active {
+    overflow-x: hidden
+}
+/*first child of #page-content so it doesn't shift around*/
+.no-margin-top {
+    margin-top: 0px!important
+}
+/*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
+#page-content {
+    position: relative;
+    left: 0;
+}
+#page-content.slide-active {
+    padding-top: 0
+}
+/* put toggle bars on the left :: not using button */
+#slide-nav .navbar-toggle {
+    cursor: pointer;
+    position: relative;
+    line-height: 0;
+    float: left;
+    margin: 0;
+    height: 40px;
+    padding: 10px 0 0 0;
+    border: 0;
+    background: transparent;
+    padding-right: 15px;
+    margin-top: -11px;
+}
+/* icon bar prettyup - optional */
+#slide-nav .navbar-toggle > .icon-bar {
+    width: 100%;
+    display: block;
+    height: 3px;
+    margin: 5px 0 0 0;
+}
+#slide-nav .navbar-toggle.slide-active .icon-bar {
+    background: orange
+}
+.navbar_header {
+    position: relative
+}
+/* un fix the navbar when active so that all the menu items are accessible */
+.navbar.navbar-fixed-top.slide-active {
+    position: relative
+}
+/* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
+@media (max-width:767px) { 
+    #slide-nav .container_navbar {
+        margin: 0;
+        padding: 0!important;
+    }
+    #slide-nav .navbar_header {
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    #slide-nav .navbar.slide-active {
+        position: absolute;
+        width: 80%;
+        top: -1px;
+        z-index: 1000;
+    }
+    #slide-nav #slidemenu {
+        background: #f7f7f7;
+        left: -100%;
+        width: 80%;
+        min-width: 0;
+        position: absolute;
+        padding-left: 0;
+        z-index: 2;
+        top: -8px;
+        margin: 0;
+    }
+    #slide-nav #slidemenu .navbar_nav {
+        min-width: 0;
+        width: 100%;
+        margin: 0;
+        float: none;
+    }
+    #slide-nav #slidemenu .navbar_nav .dropdown-menu li a {
+        min-width: 0;
+        width: 80%;
+        white-space: normal;
+    }
+    #slide-nav {
+        border-top: 0
+    }
+    #slide-nav.navbar-inverse #slidemenu {
+        background: #333;padding-top: 22px;
+    }
+    /* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
+    #slide-nav #navbar-height-col {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 80%;
+        left: -80%;
+        background: #eee;
+    }
+    #slide-nav.navbar-inverse #navbar-height-col {
+        background: #333;
+        z-index: 1;
+        border: 0;
+    }
+    #slide-nav .navbar-form {
+        width: 100%;
+        margin: 8px 0;
+        text-align: center;
+        overflow: hidden;
+    }
+    #slide-nav .navbar-form .form-control {
+        text-align: center
+    }
+    #slide-nav .navbar-form .btn {
+        width: 100%
+    }
+    #btn_regresar, #btn_salir {
+        width: 100%;font-size: 164%;
+    }
+    #user_name input{font-size: 157%; height: 100%}
+    #user_name .input-group-addon i{font-size: 228%;margin: 4px; margin-right: 6px;margin-left: 6px;}
+    #user_name .input-group-addon {padding: 0px}
+    #user_name .input-group-addon img{width: 100%; width: 100%;}
+}
+@media (min-width:768px) { 
+    #page-content {
+        left: 0!important
+    }
+    .navbar.navbar-fixed-top.slide-active {
+        position: fixed
+    }
+    .navbar_header {
+        left: 0!important
+    }
+}
+
+div#div_banner_min {background-color: #CDCDCD;font-size: 20px;height: 48px;margin-top: -10px;}
+#div_detail_modulo .ico_dt{ width: 46px; float: left;}
+#div_detail_modulo .ico_dt i {font-size: 30px;margin-top: 0px;color: #1F648C;border-right: 2px solid;padding-right: 10px;}
+#div_detail_modulo .ico_dt img{ width: 46px;margin-top: -10px; color: #1F648C;}
+#div_detail_modulo .nom_dt {float: left;font-size: 17px;padding-top: 4px;font-weight: bolder;color: #1F648C;padding-left: 10px;}
+
+.btn_closepanel{float: right;margin: 0px;padding: 1px;position: relative;margin-top: -18px;padding-left: 5px;padding-right: 5px;}
+.btn_head_panel {float: right !important; margin: 0px;padding: 4px;position: relative;margin-top: -7px; padding-left: 6px; padding-right: 6px;}
+
+input.error {border: 1px solid #E09797 !important;-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 !important;-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 !important; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 !important; background-color: #EFE0E0 !important;color: #815656;}
+label.error {   color: #CF6A6A;font-size: 80% !important;line-height: initial;}
+label{font-size: 12px !important;}
+select.error {background-color: #EFE0E0;border-color: #E09797;color: #815656;}
+
+.white_space{white-space:normal;}
+
+@media (max-width: 900px){
+    #contenido {
+        margin-top: 100px;
+    }
+}
+.alert img{width: 30px;margin-right: 10px;margin-top: -7px;float: left;}
+
+/* Bootstrap override*/
+.btn-primary {
+    color: #fff;
+    background-color: #1F648C;
+    border-color: #1B5374;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #1B5677;
+    border-color: #18445E;
+}
+.btn-default {
+    color: #333;
+    background-color: #F4F4F4;
+    border-color: #ccc;
+}
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #035431;
+    border-color: #054428;
+}
+.panel-primary {
+    border-color: #1A5171;
+}
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #1F648C;
+    border-color: #1A5171;
+}
+
+.alert-warning {
+    background-color: #EDECE5;
+    border-color: #E5D9C3;
+    color: #775F34;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    margin-bottom: 6px !important;
+}
+
+
+.alert.alert-min {padding: 4px;padding-left: 10px;margin-bottom: 0px;padding-right: 10px;}
+/* Margins y paddings*/
+.margint20{ margin-top: 20px;}
+.margint10{ margin-top: 10px;}
+
+.modal-dialog.w90{margin-left: 5%;margin-right: 5%;width: 90%;}
